@@ -4,6 +4,11 @@
 
 ## Goal
 
+## Model
+
+You can download our efficient stable diffusion model from this [link](https://huggingface.co/piuzha/efficient_sd). It is located on Huggingface with 'piuzha/efficient_sd'.
+
+
 
 ## Requirements
 
