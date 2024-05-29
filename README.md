@@ -21,6 +21,18 @@ Run the following command to run inference with the model. Specify the model dir
 python inference.py
 ```
 
+Specifically, you can load the model through 
+```
+from diffusers import DiffusionPipeline
+pipeline = DiffusionPipeline.from_pretrained("piuzha/efficient_sd/", use_safetensors=True).to("cuda")
+```
+Then run the model to generate images such as
+```
+image = pipeline("An astronaut riding a horse, detailed, 8k", num_inference_steps=25).images[0]
+image.save('test.png')
+```
+
+
 ## Todo
 
 
