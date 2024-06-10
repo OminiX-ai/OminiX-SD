@@ -10,10 +10,6 @@ By promoting transparency and reproducibility, the MOF combats “openwashing”
 
 
 
-## Model
-
-You can download our efficient stable diffusion model from this [link](https://huggingface.co/piuzha/efficient_sd). It is located on Huggingface with 'piuzha/efficient_sd'.
-
 
 
 ## Requirements
@@ -29,6 +25,13 @@ pip install img2dataset
 ## Datasets
 
 There are multiple datasets available. The scripts to download the datasets are located under the dataset_examples directory. You can refer to the specific script for details. 
+
+
+
+## Model Download
+
+You can download our efficient stable diffusion model from this [link](https://huggingface.co/piuzha/efficient_sd). It is located on Huggingface with 'piuzha/efficient_sd'.
+
 
 
 ## Training
