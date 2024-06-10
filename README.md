@@ -14,7 +14,19 @@ You can download our efficient stable diffusion model from this [link](https://h
 
 Follow the [diffusers](https://huggingface.co/docs/diffusers/en/installation) package to install the environment.
 
-## Usage
+To prepare the dataset, you can install the img2dataset package.
+```
+pip install img2dataset
+```
+
+
+## Datasets
+
+There are multiple datasets available. The scripts to download the datasets are located under the dataset_examples directory. You can refer to the specific script for details. 
+
+
+
+## Inference
 
 Run the following command to run inference with the model. Specify the model directory in the file
 ```
