@@ -25,6 +25,34 @@ pip install img2dataset
 There are multiple datasets available. The scripts to download the datasets are located under the dataset_examples directory. You can refer to the specific script for details. 
 
 
+## Training
+
+We follow  a stand  method to train the stable diffusion model. You can refer to the [huggingface diffusers text_to_image](https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image.py) script to train the text2image diffusion model. 
+
+For example, you can finetune the model with the following command,
+```
+export MODEL_NAME="runwayml/stable-diffusion-v1-5"
+export dataset_name="lambdalabs/naruto-blip-captions"
+
+accelerate launch --mixed_precision="fp16"  train_text_to_image.py \
+  --pretrained_model_name_or_path=$MODEL_NAME \
+  --dataset_name=$dataset_name \
+  --use_ema \
+  --resolution=512 --center_crop --random_flip \
+  --train_batch_size=1 \
+  --gradient_accumulation_steps=4 \
+  --gradient_checkpointing \
+  --max_train_steps=15000 \
+  --learning_rate=1e-05 \
+  --max_grad_norm=1 \
+  --enable_xformers_memory_efficient_attention
+  --lr_scheduler="constant" --lr_warmup_steps=0 \
+  --output_dir="sd-naruto-model" \
+  --push_to_hub
+```
+
+More details about the training of the diffusion model can be find [here](https://huggingface.co/docs/diffusers/en/training/text2image).   You can also try training with other methods such as lora following [this](https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image_lora.py).
+
 
 ## Inference
 
