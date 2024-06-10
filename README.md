@@ -8,7 +8,7 @@ Generative AI (GAI) offers unprecedented opportunities for research and innovati
 
 By promoting transparency and reproducibility, the MOF combats “openwashing” practices and establishes completeness and openness as primary criteria alongside the core tenets of responsible AI. Wide adoption of the MOF will foster a more open AI ecosystem, benefiting research, innovation, and adoption of state-of-the-art models. 
 
-
+We follow MOF to release the datasets during training, the training scripts, and the trained models. 
 
 
 
