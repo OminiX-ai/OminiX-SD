@@ -32,7 +32,7 @@ There are multiple datasets available. The scripts to download the datasets are 
 
 You can download our efficient stable diffusion model from this [link](https://huggingface.co/piuzha/efficient_sd). It is located on Huggingface with 'piuzha/efficient_sd'.
 
-
+We adopt a more efficient SD model. The  model architecture files of our model and the original SD 1.5 model are shown under ./docs/ .
 
 ## Training
 
