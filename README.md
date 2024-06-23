@@ -1,4 +1,4 @@
-# SD_training
+# OminiX Stable Diffusion
 
 
 
