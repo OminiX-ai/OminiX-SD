@@ -103,7 +103,11 @@ image.save('test.png')
 
 Our model can be used in [SD Webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui). 
 
-You need to download the model from this [link](https://huggingface.co/piuzha/efficient_sd). Put the model under the 'stable-diffusion-webui/models/Stable-diffusion/' directory.  
+#### 1. Prepare model
+
+You need to download the model from this [link](https://huggingface.co/piuzha/efficient_sd). Put the model under the 'stable-diffusion-webui/models/Stable-diffusion/' directory.  The model is obtained by converting our diffusers model to the compvis model through this file 'scripts/convert_diffusers_to_original_stable_diffusion.py' which can be obtained from this [link](scripts/convert_diffusers_to_original_stable_diffusion.py). 
+
+#### 2. Prepare config file
 
 You also need to use an  updated config file for our model to replace the original config file 'stable-diffusion-webui/configs/v1-inference.yaml'.  The new config file can be found under our 'configs/v1-inference.yaml'. 
 
