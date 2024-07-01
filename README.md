@@ -112,6 +112,16 @@ You need to download the model from this [link](https://huggingface.co/piuzha/ef
 You also need to use an  updated config file for our model to replace the original config file 'stable-diffusion-webui/configs/v1-inference.yaml'.  The new config file can be found under our 'configs/v1-inference.yaml'. 
 
 
+## Performance Comparison
+
+We compare our model with the original SD v1.5 model. The batch size is set to 1 for all methods.  Our model can achieve faster inference. 
+
+|     model   |   Inference Time  |   Steps   |  Device      |
+|-------------|-------------------|-----------|--------------|
+| Ours        |   4.5s            |   20      |  1080Ti      |
+|Ours         |    2.8s           |   20      | Titan RTX    |
+| SD v1.5     |   6.7s            | 20        |  1080Ti      |
+| SD v1.5     |   4.6s            | 20        |  Titan RTX   |
 
 ## Timeline
 
