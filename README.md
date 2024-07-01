@@ -14,11 +14,28 @@ We follow MOF to release the datasets during training, the training scripts, and
 
 ## Requirements
 
+#### 1. Diffusers package
 Follow the [diffusers](https://huggingface.co/docs/diffusers/en/installation) package to install the environment.
+
+#### 2. Dataset package
 
 To prepare the dataset, you can install the img2dataset package.
 ```
 pip install img2dataset
+```
+
+#### 3. SD Webui (optional)
+
+Follow this [link](https://github.com/AUTOMATIC1111/stable-diffusion-webui/tree/master) to install the webui environment. 
+
+Specifically, you can follow the follwoing instructions.
+```
+sudo apt install git software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt install python3.10-venv -y
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui && cd stable-diffusion-webui
+python3.10 -m venv venv
+./webui.sh
 ```
 
 
@@ -80,6 +97,16 @@ Then run the model to generate images such as
 image = pipeline("An astronaut riding a horse, detailed, 8k", num_inference_steps=25).images[0]
 image.save('test.png')
 ```
+
+
+## SD Webui
+
+Our model can be used in [SD Webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui). 
+
+You need to download the model from this [link](https://huggingface.co/piuzha/efficient_sd). Put the model under the 'stable-diffusion-webui/models/Stable-diffusion/' directory.  
+
+You also need to use an  updated config file for our model to replace the original config file 'stable-diffusion-webui/configs/v1-inference.yaml'.  The new config file can be found under our 'configs/v1-inference.yaml'. 
+
 
 
 ## Timeline
