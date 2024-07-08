@@ -17,6 +17,19 @@ We follow MOF to release the datasets during training, the training scripts, and
 #### 1. Diffusers package
 Follow the [diffusers](https://huggingface.co/docs/diffusers/en/installation) package to install the environment.
 
+### Mac configuration
+
+For Mac users, you can still follow the [diffusers](https://huggingface.co/docs/diffusers/en/installation) package to install the environment. As long as you can run the original SD v1.5 model successfully, you can seamlessly replace the original SD v1.5 model with our model. Specifically, to install the environment, you can  follow the instructions below,
+```
+conda install -n sd python=3.10 -y
+conda activate sd
+pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cpu
+pip install diffusers["torch"] transformers
+pip install accelerate
+pip install git+https://github.com/huggingface/diffusers
+```
+
+
 #### 2. Dataset package
 
 To prepare the dataset, you can install the img2dataset package.
